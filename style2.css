@@ -1,0 +1,138 @@
+.main{
+    width: 80%;
+    margin: 0px auto;
+    border: solid thin grey;
+}
+
+.hat{
+    background:  url(images/music.png);
+    font-size: 1.5em;
+    padding: 5px;
+    margin: auto;
+    height: 20vh;
+}
+
+.hat a{
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.hat a[href="#"]{
+    color:deeppink ;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    align-items: flex-end;
+    height: 50%;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    height: auto;
+    width: 85%;
+    margin: auto;
+}
+.block{
+    border: solid thin gray;
+    padding: 5px;
+    display: grid;
+    grid-template-rows:  min-content min-content;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-left:10px ;
+    margin-bottom: 5px;
+
+}
+.block:nth-child(2){
+    margin-top:7px ;
+}
+.sub-block{
+    padding: 5px;
+    align-content: center;
+}
+.sub-text{
+    grid-row: 2;
+    grid-column: 1/span 2;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 30px;
+    text-overflow: ellipsis;
+}
+
+.big-block{
+    grid-row: 1/span 3;
+    grid-column: 1;
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-row: 2fr;
+    align-content: stretch;
+    margin: 10px;
+}
+.big-sub-text{
+    padding: 5px;
+    grid-row: 1/span 2;
+    grid-column: 1;
+    text-align: justify;
+    overflow: hidden;
+}
+.big-sub-img{
+    padding: 5px;
+    grid-row: 1/span 2;
+    grid-column: 2;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: solid 2px grey;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+footer> div:first-child::before { content: "\00A9";}
+footer> div:last-child::before { content: "\2709";}
+
+@media (max-width: 800px) {
+    .container{
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    }
+    nav{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5px;
+        text-align: center;
+        border: solid thin red;
+        overflow: hidden;
+        
+    }
+    .hat{
+        background: none; 
+    }
+    .hat a{
+        background-color: turquoise;
+        color: black;
+    }
+}
